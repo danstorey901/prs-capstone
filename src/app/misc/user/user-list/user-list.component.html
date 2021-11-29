@@ -6,16 +6,20 @@
     <tr>
         <td>id</td>
         <td>username</td>
-        <td>nane</td>
+        <td>name</td>
+        <td>phone</td>
+        <td>email</td>
+        <td>isReviewer</td>
+        <td>isAdmin</td>
     </tr>
     <tr *ngFor="let user of users">
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
         <td>{{user.firstname}} {{user.lastname}}</td>
-        <td>{{use.phone}}</td>
+        <td>{{user.phone}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.IsReviewer}}</td>
-        <td>{{user.IsAdmin}}</td>
+        <td>{{user.isReviewer}}</td>
+        <td>{{user.isAdmin}}</td>
     </tr>
 </table>
 
