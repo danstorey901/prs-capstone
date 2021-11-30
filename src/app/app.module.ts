@@ -17,14 +17,11 @@ import { VendorCreateComponent } from './misc/vendor/vendor-create/vendor-create
 import { VendorDetailComponent } from './misc/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './misc/vendor/vendor-edit/vendor-edit.component';
 import { VendorListComponent } from './misc/vendor/vendor-list/vendor-list.component';
-import { ProductCreateComponent } from './product/product-create/product-create.component';
-import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './misc/product/product-create/product-create.component';
+import { ProductDetailComponent } from './misc/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './misc/product/product-edit/product-edit.component';
 import { ProductListComponent } from './misc/product/product-list/product-list.component';
-import { RequestCreateComponent } from './misc/request/request-create/request-create.component';
-import { RequestDetailComponent } from './misc/request/request-detail/request-detail.component';
-import { RequestEditComponent } from './misc/request/request-edit/request-edit.component';
-import { RequestListComponent } from './misc/request/request-list/request-list.component';
+
 
 
 
@@ -34,24 +31,26 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
     HomeComponent,
     AboutComponent,
     MenuComponent,
-    UserListComponent,
+    MenuItemComponent,
+
+    UserCreateComponent,
     UserDetailComponent,
     UserEditComponent,
-    UserCreateComponent,
-    MenuItemComponent,
+    UserListComponent,
 
     VendorCreateComponent,
     VendorDetailComponent,
     VendorEditComponent,
     VendorListComponent,
+
     ProductCreateComponent,
     ProductDetailComponent,
     ProductEditComponent,
     ProductListComponent,
-    RequestCreateComponent,
-    RequestDetailComponent,
-    RequestEditComponent,
-    RequestListComponent
+
+    
+
+  
 
  
   ],
