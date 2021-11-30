@@ -25,7 +25,7 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
 
 
 const routes: Routes = [
-  {path: "", redirectTo: "", pathMatch: "full"},
+  {path: "", redirectTo: "/users/list", pathMatch: "full"},
 
   { path: "users/list", component: UserListComponent},
   { path: "users/create", component: UserCreateComponent},
