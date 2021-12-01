@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/misc/user/user.class';
 import { Menu } from './menu.class';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +10,11 @@ import { Menu } from './menu.class';
 })
 export class MenuComponent implements OnInit {
 
+  /*get name() {
+    return this.sys.getLoggedInUser()?.username;
+  }  method for getting who is logged in and displaying username - gets name/returns username
+  */
+
   menus: Menu[] = [
     new Menu("Home", "/home"),
     new Menu("Users", "user/list"),
@@ -15,9 +22,12 @@ export class MenuComponent implements OnInit {
     new Menu("Products", "product/list"),
     new Menu("Requests", "request/list"),
     new Menu("About", "/about"),
-  ]
+    new Menu("Login", "/users/login"),
+    new Menu("Change Password", "/users/passwordchange")
+  ];
 
-  constructor() { }
+  constructor(
+    /*private sys: SystemService   this is the constructor to enable the method to display username*/ ) { }
 
   ngOnInit(): void {
   }

@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './misc/home/home.component';
 
+import { E404Component } from './misc/e404/e404.component';
+
 import { UserCreateComponent } from './misc/user/user-create/user-create.component';
 import { UserDetailComponent } from './misc/user/user-detail/user-detail.component';
 import { UserEditComponent } from './misc/user/user-edit/user-edit.component';
 import { UserListComponent } from './misc/user/user-list/user-list.component';
+import { UserLoginComponent } from './misc/user/user-login/user-login.component';
+import { UserPasswordChangeComponent } from './misc/user/user-password-change/user-password-change.component';
 
 import { VendorCreateComponent } from './misc/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './misc/vendor/vendor-detail/vendor-detail.component';
@@ -21,6 +25,7 @@ import { RequestCreateComponent } from './misc/request/request-create/request-cr
 import { RequestDetailComponent } from './misc/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './misc/request/request-edit/request-edit.component';
 import { RequestListComponent } from './misc/request/request-list/request-list.component';
+import { AboutComponent } from './misc/about/about.component';
 
 
 
@@ -31,6 +36,8 @@ const routes: Routes = [
   { path: "users/detail/:id", component: UserDetailComponent},
   { path: "users/edit/:id", component: UserEditComponent},
   { path: "users/list", component: UserListComponent},
+  { path: "users/login", component: UserLoginComponent},
+  { path: "users/passwordchange", component: UserPasswordChangeComponent},
 
   { path: "vendors/create", component: VendorCreateComponent},
   { path: "vendors/detail/:id", component: VendorDetailComponent},
@@ -47,8 +54,11 @@ const routes: Routes = [
   { path: "requests/edit/:id", component: RequestEditComponent},
   { path: "requests/list", component: RequestListComponent},
 
+  {path: "about", component: AboutComponent},
+  {path: "**", component: HomeComponent},
 
-  { path: "**", component: HomeComponent}
+
+  { path: "e404", component: E404Component}
 ];
 
 @NgModule({

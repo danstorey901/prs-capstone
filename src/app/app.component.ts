@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'prs-capstone';
   
+  /*
+  <button (click)="clicked()">Click it or Whatever!</button>
+  clicked(): void {
+    this.title = "Dan's button";
+  }
+  */
 }

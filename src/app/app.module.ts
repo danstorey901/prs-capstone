@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+
 import { HomeComponent } from './misc/home/home.component';
 import { AboutComponent } from './misc/about/about.component';
+
+import { E404Component } from './misc/e404/e404.component';
 import { MenuComponent } from './misc/menu/menu.component';
 import { MenuItemComponent } from './misc/menu/menu-item/menu-item.component';
 
@@ -13,11 +17,16 @@ import { UserCreateComponent } from './misc/user/user-create/user-create.compone
 import { UserDetailComponent } from './misc/user/user-detail/user-detail.component';
 import { UserEditComponent } from './misc/user/user-edit/user-edit.component';
 import { UserListComponent } from './misc/user/user-list/user-list.component';
+import { UserLoginComponent } from './misc/user/user-login/user-login.component';
+import { UserPasswordChangeComponent } from './misc/user/user-password-change/user-password-change.component';
+//import { UserSearchPipe } from './misc/user/user-search.pipe';
+
 
 import { VendorCreateComponent } from './misc/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './misc/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './misc/vendor/vendor-edit/vendor-edit.component';
 import { VendorListComponent } from './misc/vendor/vendor-list/vendor-list.component';
+
 
 import { ProductCreateComponent } from './misc/product/product-create/product-create.component';
 import { ProductDetailComponent } from './misc/product/product-detail/product-detail.component';
@@ -37,6 +46,8 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
     AppComponent,
     HomeComponent,
     AboutComponent,
+    E404Component,
+
     MenuComponent,
     MenuItemComponent,
 
@@ -44,6 +55,8 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
     UserDetailComponent,
     UserEditComponent,
     UserListComponent,
+    UserLoginComponent,
+    UserPasswordChangeComponent,
 
     VendorCreateComponent,
     VendorDetailComponent,
