@@ -12,7 +12,7 @@ li {
 a {
     color: silver;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 a:hover {

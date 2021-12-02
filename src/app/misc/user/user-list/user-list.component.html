@@ -1,6 +1,7 @@
-
+<app-menu></app-menu>
 
 <h1>User List</h1>
+
 
 <table>
     <tr>
@@ -11,8 +12,10 @@
         <td>email</td>
         <td>isReviewer</td>
         <td>isAdmin</td>
+
     </tr>
-    <tr *ngFor="let user of users">
+
+    <tr *ngFor="let user of user">
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
         <td>{{user.firstname}} {{user.lastname}}</td>

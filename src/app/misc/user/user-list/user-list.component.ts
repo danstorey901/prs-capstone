@@ -9,14 +9,14 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent implements OnInit {
 
-  users: User[] = [];
+  user: User[] = [];
 
   constructor( private usersvc:UserService) {}
 
   ngOnInit(): void { 
     this.usersvc.list().subscribe({
       next: res => {
-        this.users=res;
+        this.user=res;
         console.log(res);
       }
     })

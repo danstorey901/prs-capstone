@@ -17,17 +17,17 @@ export class MenuComponent implements OnInit {
 
   menus: Menu[] = [
     new Menu("Home", "/home"),
-    new Menu("Users", "user/list"),
-    new Menu("Vendors", "vendor/list"),
-    new Menu("Products", "product/list"),
-    new Menu("Requests", "request/list"),
+    new Menu("Users", "users/list"),
+    new Menu("Vendors", "vendors/list"),
+    new Menu("Products", "products/list"),
+    new Menu("Requests", "requests/list"),
     new Menu("About", "/about"),
     new Menu("Login", "/users/login"),
     new Menu("Change Password", "/users/passwordchange")
   ];
 
   constructor(
-    /*private sys: SystemService   this is the constructor to enable the method to display username*/ ) { }
+    /*private sys: SystemService   is this a constructor to enable the method to display username*/ ) { }
 
   ngOnInit(): void {
   }
