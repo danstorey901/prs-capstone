@@ -1,20 +1,26 @@
 <app-menu></app-menu>
 
 <h1>User List</h1>
+    <header>
+        <span> <a routerLink="/users/create">Create</a></span>
+        </header>
+        <main>
+            <table class="table table-sm">
+                <thead>
 
-
-<table>
     <tr>
-        <td>id</td>
-        <td>username</td>
-        <td>name</td>
-        <td>phone</td>
-        <td>email</td>
-        <td>isReviewer</td>
-        <td>isAdmin</td>
+        <th>id</th>
+        <th>username</th>
+        <th>name</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>isReviewer</th>
+        <th>isAdmin</th>
+        <th>Actions</th>
 
     </tr>
-
+</thead>
+<tbody>
     <tr *ngFor="let user of user">
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
@@ -23,5 +29,11 @@
         <td>{{user.email}}</td>
         <td>{{user.isReviewer}}</td>
         <td>{{user.isAdmin}}</td>
+        <td>
+            <span><a routerLink="/users/detail/{{user.id}}">Detail</a></span>
+            <span *ngIf="isAdmin"> | <a routerLink="/users/edit/{{user.id}}">Edit</a></span>
+        </td>
     </tr>
+</tbody>
 </table>
+</main>

@@ -1,3 +1,61 @@
-<p>user-create works!</p>
-
 <h1>User Create</h1>
+
+<div id="component">
+    <header>
+        <span class="font-weight-bold">{{ pageTitle }}</span> | 
+        <span><a routerLink="/users/list">Back to list</a></span>
+    </header>
+    <main>
+        <form>
+            <table class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td>Id</td>
+                        <td><input [(ngModel)]="user.id" name="id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>User name</td>
+                        <td><input [(ngModel)]="user.username" name="username" size="20" autocomplete="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input [(ngModel)]="user.password" name="password" type="password" size="20">
+                            <input [(ngModel)]="password" name="password2" type="password" size="20" (blur)="checkPasswords()">
+                            <span>{{passwordCheck}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>First name</td>
+                        <td><input [(ngModel)]="user.firstname" name="firstname" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td><input [(ngModel)]="user.lastname" name="lastname" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><input [(ngModel)]="user.phone" name="phone" type="tel" size="10" ></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input [(ngModel)]="user.email" name="email" type="email" size="30" ></td>
+                    </tr>
+                    <tr>
+                        <td>Reviewer</td>
+                        <td><input [(ngModel)]="user.isReviewer" name="isReviewer" type="checkbox" size="10" ></td>
+                    </tr>
+                    <tr>
+                        <td>Admin</td>
+                        <td><input [(ngModel)]="user.isAdmin" name="isAdmin" type="checkbox" size="10" ></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <button (click)="save()" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+    </footer>
+</div>

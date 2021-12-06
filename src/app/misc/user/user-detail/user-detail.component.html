@@ -1,3 +1,64 @@
-<p>user-detail works!</p>
+<app-menu></app-menu>
+<div id="component">
+    <header>
+    
+        <span><a routerLink="/users/list">Back to list</a></span>
+    </header>
 
 <h1>User Detail</h1>
+
+<main>
+    <form *ngIf="user" >
+    <table class="table table-sm">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td><input [(ngModel)]="user.id" name="id" disabled></td>
+            </tr>
+            <tr>
+                <td>User name</td>
+                <td><input [(ngModel)]="user.username" name="username" size="20" disabled></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input [(ngModel)]="user.password" name="password" type="password" size="20" disabled></td>
+            </tr>
+            <tr>
+                <td>First name</td>
+                <td><input [(ngModel)]="user.firstname" name="firstname" size="20" disabled></td>
+            </tr>
+            <tr>
+                <td>Last name</td>
+                <td><input [(ngModel)]="user.lastname" name="lastname" size="20" disabled></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input [(ngModel)]="user.phone" name="phone" type="tel" size="10" disabled></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input [(ngModel)]="user.email" name="email" type="email" size="30" disabled></td>
+            </tr>
+            <tr>
+                <td>Reviewer</td>
+                <td><input [(ngModel)]="user.isReviewer" name="isReviewer" type="checkbox" size="10" disabled></td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td><input [(ngModel)]="user.isAdmin" name="isAdmin" type="checkbox" size="10" disabled></td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="isAdmin" class="text-center">
+        <a routerLink="/users/edit/{{user.id}}" class="btn btn-warning">Edit</a> | 
+        <button (click)="remove()" class="btn btn-danger">Delete</button>
+        <span *ngIf="verifyDelete">
+            <span> | </span>
+            <button (click)="verify()" class="btn btn-danger">Verify Delete</button>
+        </span>
+    </div>
+</form>
+</main>
+<footer>
+</footer>
+</div>
