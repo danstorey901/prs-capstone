@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
     new Menu("Requests", "requests/list"),
     new Menu("About", "/about"),
     new Menu("Login", "/users/login"),
-    new Menu("Change Password", "/users/passwordchange")
+   
   ];
 
   constructor(

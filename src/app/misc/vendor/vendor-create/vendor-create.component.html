@@ -1,3 +1,59 @@
-<p>vendor-create works!</p>
-
 <h1>Vendor Create</h1>
+
+<div id="component">
+    <header>
+        <span class="font-weight-bold">{{ pageTitle }}</span> | 
+        <span><a routerLink="/vendors/list">Back to list</a></span>
+    </header>
+    <main>
+        <form *ngIf="vendor">
+            <table class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td>Id</td>
+                        <td><input [(ngModel)]="vendor.id" name="id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Code</td>
+                        <td><input [(ngModel)]="vendor.code" name="code" size="20" autocomplete="code"></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <input [(ngModel)]="vendor.name" name="name" type="name" size="20">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input [(ngModel)]="vendor.address" name="address" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input [(ngModel)]="vendor.city" name="city" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td><input [(ngModel)]="vendor.state" name="state" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>Zip</td>
+                        <td><input [(ngModel)]="vendor.zip" name="zip" size="20" ></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><input [(ngModel)]="vendor.phone" name="phone" type="tel" size="10" ></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input [(ngModel)]="vendor.email" name="email" type="email" size="30" ></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <button (click)="save()" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+    </footer>
+</div>

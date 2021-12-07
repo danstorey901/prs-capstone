@@ -18,7 +18,6 @@ import { UserDetailComponent } from './misc/user/user-detail/user-detail.compone
 import { UserEditComponent } from './misc/user/user-edit/user-edit.component';
 import { UserListComponent } from './misc/user/user-list/user-list.component';
 import { UserLoginComponent } from './misc/user/user-login/user-login.component';
-import { UserPasswordChangeComponent } from './misc/user/user-password-change/user-password-change.component';
 //import { UserSearchPipe } from './misc/user/user-search.pipe';
 
 
@@ -56,7 +55,7 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
     UserEditComponent,
     UserListComponent,
     UserLoginComponent,
-    UserPasswordChangeComponent,
+  
 
     VendorCreateComponent,
     VendorDetailComponent,

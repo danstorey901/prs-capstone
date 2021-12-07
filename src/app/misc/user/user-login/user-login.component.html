@@ -1,1 +1,26 @@
-<p>user-login works!</p>
+<div id="login-component">
+    <form id="table">
+        <table class="table table-sm table-borderless">
+            <tr>
+                <th class="bigger50pct bold" colspan="2">PRS Login</th>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td>User name:</td>
+                <td>
+                    <input [(ngModel)]="username" size=20 name="username" autocomplete="username">
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input [(ngModel)]="password" size=20 type="password" name="password" autocomplete="current-password">
+                </td>
+            </tr>
+            <tr>
+                <th class="font-weight-bold red" colspan="2">{{message}}&nbsp;</th>
+            </tr>
+        </table>
+        <button id="btnsave" (click)="login()" type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

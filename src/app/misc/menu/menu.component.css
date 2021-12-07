@@ -1,5 +1,5 @@
 nav {
-    background-color: black;
+    background-color: gray;
 }
 ul{
     margin: 0;
@@ -10,12 +10,12 @@ li {
     display: inline-block;
 }
 a {
-    color: silver;
+    color: gray;
     text-decoration: none;
     padding: 0 20px;
 }
 
 a:hover {
     color: white;
-    background-color: black;
+    background-color: gray;
 }

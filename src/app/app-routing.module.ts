@@ -9,7 +9,7 @@ import { UserDetailComponent } from './misc/user/user-detail/user-detail.compone
 import { UserEditComponent } from './misc/user/user-edit/user-edit.component';
 import { UserListComponent } from './misc/user/user-list/user-list.component';
 import { UserLoginComponent } from './misc/user/user-login/user-login.component';
-import { UserPasswordChangeComponent } from './misc/user/user-password-change/user-password-change.component';
+
 
 import { VendorCreateComponent } from './misc/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './misc/vendor/vendor-detail/vendor-detail.component';
@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: "users/edit/:id", component: UserEditComponent},
   { path: "users/list", component: UserListComponent},
   { path: "users/login", component: UserLoginComponent},
-  { path: "users/passwordchange", component: UserPasswordChangeComponent},
+
 
   { path: "vendors/create", component: VendorCreateComponent},
   { path: "vendors/detail/:id", component: VendorDetailComponent},

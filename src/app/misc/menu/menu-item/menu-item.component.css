@@ -1,5 +1,5 @@
 nav {
-    background-color: black;
+    background-color: gray;
 }
 
 li {
@@ -12,6 +12,6 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: gray;
     background-color: rgb(228, 16, 16);
 }

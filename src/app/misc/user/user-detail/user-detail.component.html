@@ -49,7 +49,7 @@
             </tr>
         </tbody>
     </table>
-    <div *ngIf="isAdmin" class="text-center">
+    <div class="text-center">
         <a routerLink="/users/edit/{{user.id}}" class="btn btn-warning">Edit</a> | 
         <button (click)="remove()" class="btn btn-danger">Delete</button>
         <span *ngIf="verifyDelete">

@@ -26,16 +26,16 @@ export class UserCreateComponent implements OnInit {
 
   save(): void {
     console.log("B4", this.user);
-    this.usr.create(this.user).subscribe(
-      res => {
+    this.usr.create(this.user).subscribe({
+     next: res => {
         console.log("User created successfully!");
         this.router.navigateByUrl("/users/list");
       },
-      err => {
+     error: err => {
         console.error(err);
 
       }
-    )
+    })
   }
   
 
