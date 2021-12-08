@@ -1,3 +1,55 @@
-<p>product-detail works!</p>
+<app-menu></app-menu>
+
+<div id="component">
 
 <h1>Product Detail</h1>
+    <header>
+        <span><a routerLink="/products/list">Back to list</a></span>
+    </header>
+    <main>
+        <form *ngIf="product" >
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="product.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Part Nbr</td>
+                    <td><input [(ngModel)]="product.partNbr" name="partNbr" size="20" disabled></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="product.name" name="name" type="test" size="20" disabled></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input [(ngModel)]="product.price" name="price" type="number" size="20" disabled></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input [(ngModel)]="product.unit" name="unit" size="20" disabled></td>
+                </tr>
+                <tr>
+                    <td>Photopath</td>
+                    <td><input [(ngModel)]="product.photoPath" name="photoPath" type="text" size="30" disabled></td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td><input [ngModel]="product.vendor?.name" name="vendor" type="text" size="20" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <a routerLink="/products/edit/{{product.id}}" class="btn btn-warning">Edit</a> | 
+            <button (click)="remove()" class="btn btn-danger">Delete</button>
+            <span *ngIf="verifyDelete">
+                <span> | </span>
+                <button (click)="verify()" class="btn btn-danger">Verify Delete</button>
+            </span>
+        </div>
+    </form>
+    </main>
+    <footer>
+    </footer>
+</div>
