@@ -17,7 +17,7 @@ export class VendorService {
   get(id: number): Observable<Vendor> {
     return this.http.get(`${"http://localhost:57419/api/vendors"}/${id}`) as Observable<Vendor>;
   }
-  create(vendor: Vendor): Observable<Vendor> {    // wants to change the spelling from vendor to Vendors and change id to static any inside vendor.class???
+  create(vendor: Vendor): Observable<Vendor> {  
     return this.http.post(`${"http://localhost:57419/api/vendors"}`, vendor) as Observable<Vendor>;
   }
   change(vendor: Vendor): Observable<any> {

@@ -1,3 +1,41 @@
 <app-menu></app-menu>
 
 <h1>Product List</h1>
+
+<div id="component">
+    <header>
+        <span class="font-weight-bold">Product List</span>
+        <span><a routerLink="/products/create">Create</a></span>
+    </header>
+    <main>
+        <table class="table table-sm">
+            <thead>
+
+                <tr>
+                    <td>id</td>
+                    <td>partNbr</td>
+                    <td>name</td>
+                    <td>price</td>
+                    <td>unit</td>
+                    <td>vendorname</td>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.id}}</td>
+                    <td>{{product.partNbr}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price | currency}}</td>
+                    <td>{{product.unit}}</td>
+                    <td>{{product.vendor?.name}}</td>
+                    <td>
+                        <span><a routerLink="/products/detail/{{product.id}}">Detail</a></span>
+                        <span><a routerLink="/products/edit/{{product.id}}">Edit</a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</div>
