@@ -10,9 +10,11 @@ export class Request {
     status: string = "NEW"
     total: number = 0;
     
+    
     userId: number = 0;
     user?: User;
-    userName: string = "";
+    username: string = "";
 
-    //requestlines!: Requestline[];
+   // requestlines!: Requestline[];
+    
 }

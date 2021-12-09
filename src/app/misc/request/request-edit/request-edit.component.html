@@ -1,3 +1,54 @@
-<p>request-edit works!</p>
+<app-menu></app-menu>
 
 <h1>Request Edit</h1>
+
+<div id="component">
+    <header>
+        <span><a routerLink="/requests/list">Back to list</a></span>
+    </header>
+    <main>
+        <form *ngIf="request" >
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="request.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input [(ngModel)]="request.description" name="description" size="30" ></td>
+                </tr>
+                <tr>
+                    <td>Justification</td>
+                    <td><input [(ngModel)]="request.justification" name="text" type="text" size="30" ></td>
+                </tr>
+                <tr *ngIf="request.rejectionReason">
+                    <td>Rejection Reason</td>
+                    <td><input [(ngModel)]="request.rejectionReason" name="rejectionReason" size="30"  disabled></td>
+                </tr>
+                <tr>
+                    <td>Delivery Mode</td>
+                    <td><input [(ngModel)]="request.deliveryMode" name="deliveryMode" size="20" ></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input [(ngModel)]="request.status" name="status" type="text" size="10"  disabled></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input [ngModel]="request.total | number:'1.2'" name="total" type="text" size="15"  disabled></td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td><input [ngModel]="request.user?.username" name="username" type="text" size="15" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+    </main>
+    <footer>
+    </footer>
+</div>

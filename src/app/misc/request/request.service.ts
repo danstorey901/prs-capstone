@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { request } from 'http';
 import { Observable } from 'rxjs';
 import { Request } from './request.class';
 
@@ -9,9 +8,7 @@ import { Request } from './request.class';
 })
 export class RequestService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
   
   list(): Observable<Request[]> {
@@ -21,7 +18,7 @@ export class RequestService {
   get(id: number): Observable<Request> {
     return this.http.get(`${"http://localhost:57419/api/requests"}/${id}`) as Observable<Request>;
   }
-
+ 
   create(request: Request): Observable<Request> {
     return this.http.post(`${"http://localhost:57419/api/requests"}`, request) as Observable<Request>;
   }

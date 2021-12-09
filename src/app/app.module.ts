@@ -36,6 +36,10 @@ import { RequestCreateComponent } from './misc/request/request-create/request-cr
 import { RequestDetailComponent } from './misc/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './misc/request/request-edit/request-edit.component';
 import { RequestListComponent } from './misc/request/request-list/request-list.component';
+import { RequestLinesComponent } from './misc/request/request-lines/request-lines/request-lines.component';
+import { RequestReviewItemComponent } from './misc/request/request-review-item/request-review-item/request-review-item.component';
+import { RequestReviewListComponent } from './misc/request/request-review-list/request-review-list/request-review-list.component';
+
 
 
 
@@ -70,7 +74,10 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
     RequestCreateComponent,
     RequestDetailComponent,
     RequestEditComponent,
-    RequestListComponent
+    RequestListComponent,
+    RequestLinesComponent,
+    RequestReviewItemComponent,
+    RequestReviewListComponent,
 
   ],
   imports: [
