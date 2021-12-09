@@ -1,3 +1,43 @@
 <app-menu></app-menu>
 
 <h1>Request List</h1>
+
+<div id="component">
+    <header>
+        <span> | <a routerLink="/requests/create">Create</a></span>
+    </header>
+    <main>
+        <table class="table table-sm">
+            <thead>
+
+                <tr>
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>Justification</th>
+                    <th>Delivery Mode</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>User</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let request of requests">
+                    <td>{{request.id}}</td>
+                    <td>{{request.description}}</td>
+                    <td>{{request.justification}}</td>
+                    <td>{{request.deliveryMode}}</td>
+                    <td>{{request.status}}</td>
+                    <td>{{request.total | currency}}</td>
+                    <td>{{request.userName}}</td>
+                    <td>
+                        <span><a routerLink="/requests/detail/{{request.id}}">Detail</a></span>
+                        <span><a routerLink="/requests/edit/{{request.id}}">Edit</a></span>
+                        <span><a routerLink="/requests/lines/{{request.id}}">Lines</a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</div>
