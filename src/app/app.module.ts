@@ -18,7 +18,6 @@ import { UserDetailComponent } from './misc/user/user-detail/user-detail.compone
 import { UserEditComponent } from './misc/user/user-edit/user-edit.component';
 import { UserListComponent } from './misc/user/user-list/user-list.component';
 import { UserLoginComponent } from './misc/user/user-login/user-login.component';
-//import { UserSearchPipe } from './misc/user/user-search.pipe';
 
 
 import { VendorCreateComponent } from './misc/vendor/vendor-create/vendor-create.component';
@@ -39,7 +38,7 @@ import { RequestListComponent } from './misc/request/request-list/request-list.c
 import { RequestLinesComponent } from './misc/request/request-lines/request-lines/request-lines.component';
 import { RequestReviewItemComponent } from './misc/request/request-review-item/request-review-item/request-review-item.component';
 import { RequestReviewListComponent } from './misc/request/request-review-list/request-review-list/request-review-list.component';
-
+import { RequestlineEditComponent } from './misc/requestline/requestline-edit/requestline-edit.component';
 
 
 
@@ -78,6 +77,7 @@ import { RequestReviewListComponent } from './misc/request/request-review-list/r
     RequestLinesComponent,
     RequestReviewItemComponent,
     RequestReviewListComponent,
+    RequestlineEditComponent,
 
   ],
   imports: [

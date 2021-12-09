@@ -1,5 +1,6 @@
 
 import { User } from "../user/user.class";
+import { Requestline } from "../requestline/requestline.class";
 
 export class Request {
     id: number = 0;
@@ -15,6 +16,6 @@ export class Request {
     user?: User;
     username: string = "";
 
-   // requestlines!: Requestline[];
+   requestlines!: Requestline[];
     
 }
