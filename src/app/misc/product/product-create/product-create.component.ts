@@ -31,17 +31,17 @@ export class ProductCreateComponent implements OnInit {
         }
       });
       console.log("B4", this.product);
-      this.usr.create(this.product).subscribe(
-        res => {
+      this.usr.create(this.product).subscribe({
+       next: res => {
           console.log("Product created successfully!");
           this.router.navigateByUrl("/products/list");
         },
-        err => {
+       error: err => {
           console.error(err);
 
         }
-      )
-      }
+      });
+    }
 
 
   ngOnInit(): void {

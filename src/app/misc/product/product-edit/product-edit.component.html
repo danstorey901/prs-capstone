@@ -1,3 +1,53 @@
-<p>product-edit works!</p>
-
+<app-menu></app-menu>
 <h1>Product Edit</h1>
+
+<div id="component">
+    <header>
+        <span><a routerLink="/products/list">Back to list</a></span>
+    </header>
+    <main>
+        <form *ngIf="product" >
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="product.id" name="id" disabled></td>
+                </tr>
+                <tr>
+                    <td>Part Nbr</td>
+                    <td><input [(ngModel)]="product.partNbr" name="partNbr" size="20" ></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="product.name" name="name" type="text" size="20" ></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input [(ngModel)]="product.price" name="price" type="number" size="20" ></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input [(ngModel)]="product.unit" name="unit" size="20" ></td>
+                </tr>
+                <tr>
+                    <td>Photopath</td>
+                    <td><input [(ngModel)]="product.photoPath" name="photoPath" type="text" size="30" ></td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td>
+                        <select [(ngModel)]="product.vendorId" name="vendor" class="select-list">
+                            <option *ngFor="let v of vendors" [ngValue]=v.id>{{v.name}}</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+    </main>
+    <footer>
+    </footer>
+</div>
