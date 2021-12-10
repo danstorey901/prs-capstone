@@ -18,6 +18,10 @@ export class RequestService {
   get(id: number): Observable<Request> {
     return this.http.get(`${"http://localhost:57419/api/requests"}/${id}`) as Observable<Request>;
   }
+
+  reviews(id: number): Observable<Request[]> {
+    return this.http.get(`${"http://localhost:57419/api/requests/reviews"}/${id}`) as Observable<Request[]>;
+  }
  
   create(request: Request): Observable<Request> {
     return this.http.post(`${"http://localhost:57419/api/requests"}`, request) as Observable<Request>;
@@ -33,15 +37,15 @@ export class RequestService {
   // new methods
 
   review(request: Request): Observable<any> {
-    return this.http.put(`${"http://localhost:57419/api/requests"}/review/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${"http://localhost:57419/api/requests"}/review`, request) as Observable<any>;
   }
 
   approve(request: Request): Observable<any> {
-    return this.http.put(`${"http://localhost:57419/api/requests"}/review/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${"http://localhost:57419/api/requests"}/approve`, request) as Observable<any>;
   }
 
   reject(request: Request): Observable<any> {
-    return this.http.put(`${"http://localhost:57419/api/requests"}/review/${request.id}`, request) as Observable<any>;
+    return this.http.put(`${"http://localhost:57419/api/requests"}/reject`, request) as Observable<any>;
   }
 
 }

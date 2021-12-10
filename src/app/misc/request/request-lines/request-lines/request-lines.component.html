@@ -1,12 +1,16 @@
+<app-menu></app-menu>
+
 <h1>Request</h1>
 
-<table class="table table-sm">
-    <thead>
+<main *ngIf="request">
 
-        <tr>
-            <th>id</th>
-            <th>description</th>
-            <th>status</th>
+    <table class="table table-sm">
+        <thead>
+            
+            <tr>
+                <th>id</th>
+                <th>description</th>
+                <th>status</th>
             <th>total</th>
             <th>user</th>
             <th>Actions</th>
@@ -27,10 +31,12 @@
 </table>
 
 <h1>Requestline</h1>
+
 <a routerLink="/requestlines/create/{{request.id}}">Create</a>
+
 <table class="table table-sm">
     <thead>
-
+        
         <tr>
             <th>id</th>
             <th>product</th>
@@ -48,9 +54,10 @@
             <td>{{rl.product?.price | currency}}</td>
             <td>{{rl.quantity * rl.product.price}}</td>
             <td>
-                <span><a routerLink="/requestlines/edit/{{rl.id}}">Edit</a></span>
-                <span><button (click)="delete(rl.id)">Delete</button></span>
+                <span><a routerLink="/requestlines/edit/{{rl.id}}" class="btn btn-link">Edit</a></span>
+                <span> | <button (click)="delete(rl.id)" class="btn btn-link">Delete</button></span>
             </td>
         </tr>
     </tbody>
 </table>
+</main>

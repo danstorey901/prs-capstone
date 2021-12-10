@@ -11,22 +11,22 @@ export class RequestlineService {
   constructor(private http: HttpClient) { }
 
 list(): Observable<Requestline[]> {
-  return this.http.get(`${"http://localhost:57419/api/requests"}`) as Observable<Requestline[]>;
+  return this.http.get(`${"http://localhost:57419/api/requestlines"}`) as Observable<Requestline[]>;
 }
 
 get(id: number): Observable<Requestline> {
-  return this.http.get(`${"http://localhost:57419/api/requests"}/${id}`) as Observable<Requestline>;
+  return this.http.get(`${"http://localhost:57419/api/requestlines"}/${id}`) as Observable<Requestline>;
 }
 
 create(user: Requestline): Observable<Requestline> {
-  return this.http.post(`${"http://localhost:57419/api/requests"}`, user) as Observable<Requestline>;
+  return this.http.post(`${"http://localhost:57419/api/requestlines"}`, user) as Observable<Requestline>;
 }
 
 change(user: Requestline): Observable<any> {
-  return this.http.put(`${"http://localhost:57419/api/requests"}/${user.id}`, user) as Observable<any>;
+  return this.http.put(`${"http://localhost:57419/api/requestlines"}/${user.id}`, user) as Observable<any>;
 }
 
 remove(id: number): Observable<any> {
-  return this.http.delete(`${"http://localhost:57419/api/requests"}/${id}`) as Observable<any>;
+  return this.http.delete(`${"http://localhost:57419/api/requestlines"}/${id}`) as Observable<any>;
 }
 }

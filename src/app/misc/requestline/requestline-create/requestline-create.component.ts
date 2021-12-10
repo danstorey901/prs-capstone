@@ -26,7 +26,9 @@ export class RequestlineCreateComponent implements OnInit {
     private router: Router
   ) { }
 
+
   save(): void {
+    this.requestline.productId = +this.requestline.productId;
     console.debug("B4", this.requestline);
     this.reql.create(this.requestline).subscribe({
       next: res => {

@@ -24,6 +24,10 @@ export class RequestLinesComponent implements OnInit {
 
   ) { }
 
+  edit(id: number): void {
+    this.router.navigateByUrl(`/requestlines/edit/${id}`);
+  }
+
   delete(id: number): void {
     this.reql.remove(id).subscribe({
       next: res => {

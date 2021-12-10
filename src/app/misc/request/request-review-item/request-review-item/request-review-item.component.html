@@ -1,1 +1,70 @@
-<p>request-review-item works!</p>
+<app-menu></app-menu>
+<div id="component">
+    <header>
+
+    </header>
+    <main *ngIf="request">
+
+        <h3>Request</h3>
+
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th><a>Description</a></th>
+                    <th><a>Rejection Reason</a></th>
+                    <th><a>Status</a></th>
+                    <th><a>Total</a></th>
+                    <th><a>User</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{request.id}}</td>
+                    <td>{{request.description}}</td>
+                    <td>{{request.rejectionReason}}</td>
+                    <td>{{request.status}}</td>
+                    <td>{{request.total | currency}}</td>
+                    <td>{{request.username}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Requestlines</h3>
+
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th><a>Id</a></th>
+                    <th><a>Product</a></th>
+                    <th><a>Quantity</a></th>
+                    <th><a>Price</a></th>
+                    <th><a>Subtotal</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rl of request.requestlines">
+                    <td>{{rl.id}}</td>
+                    <td>{{rl.product.name}}</td>
+                    <td>{{rl.quantity}}</td>
+                    <td>{{rl.product.price | currency}}</td>
+                    <td>{{rl.quantity * rl.product.price | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="more-padding">
+            <div class="left  inline-block">
+                <button (click)="showRejectionReason()" class="btn btn-danger ">Reject</button>
+                <span *ngIf="showRejection">
+                    
+                    <span> | <input [(ngModel)]="request.rejectionReason" size="30" name="rejectionReason"></span>
+                    <span> | <button (click)="reject(request)" class="btn btn-danger">Verify Reject</button></span>
+                </span>
+            </div>
+            <div class="right  inline-block">
+                <button (click)="approve(request)" class="btn btn-success ">Approve</button>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</div>
