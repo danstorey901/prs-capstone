@@ -1,21 +1,18 @@
-nav {
-    background-color: gray;
+nav, #right {
+    background-color: #454545;
+    display: inline-block;
+    padding: 3px;
 }
-ul{
+nav {
+    width: 80%;
+}
+ul {
     margin: 0;
     padding: 0;
 }
-
-li {
-    display: inline-block;
-}
-a {
-    color: gray;
-    text-decoration: none;
-    padding: 0 20px;
-}
-
-a:hover {
-    color: white;
-    background-color: gray;
+#right {
+    text-align: right;
+    color: silver;
+    width: 20%;
+    padding-right: 5px;
 }

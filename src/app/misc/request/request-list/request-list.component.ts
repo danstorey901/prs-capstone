@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
 
+
 @Component({
   selector: 'app-request-list',
   templateUrl: './request-list.component.html',
@@ -11,7 +12,10 @@ export class RequestListComponent implements OnInit {
 
   requests: Request[] = [];
 
-  constructor(private req: RequestService) { }
+  constructor(
+    private req: RequestService,
+  
+    ) { }
 
 
   ngOnInit(): void {

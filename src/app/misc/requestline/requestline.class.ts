@@ -5,9 +5,9 @@ export class Requestline {
     quantity: number = 1;
 
     requestId: number = 0;
-    request?: Request;
+    request!: Request;
 
     productId: number = 0;
-    product?: Product;
+    product!: Product;
 
 }

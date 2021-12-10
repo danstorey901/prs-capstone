@@ -10,6 +10,7 @@ import { HomeComponent } from './misc/home/home.component';
 import { AboutComponent } from './misc/about/about.component';
 
 import { E404Component } from './misc/e404/e404.component';
+
 import { MenuComponent } from './misc/menu/menu.component';
 import { MenuItemComponent } from './misc/menu/menu-item/menu-item.component';
 
@@ -35,10 +36,13 @@ import { RequestCreateComponent } from './misc/request/request-create/request-cr
 import { RequestDetailComponent } from './misc/request/request-detail/request-detail.component';
 import { RequestEditComponent } from './misc/request/request-edit/request-edit.component';
 import { RequestListComponent } from './misc/request/request-list/request-list.component';
+
 import { RequestLinesComponent } from './misc/request/request-lines/request-lines/request-lines.component';
+
 import { RequestReviewItemComponent } from './misc/request/request-review-item/request-review-item/request-review-item.component';
 import { RequestReviewListComponent } from './misc/request/request-review-list/request-review-list/request-review-list.component';
 import { RequestlineEditComponent } from './misc/requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent } from './misc/requestline/requestline-create/requestline-create.component';
 
 
 
@@ -78,6 +82,7 @@ import { RequestlineEditComponent } from './misc/requestline/requestline-edit/re
     RequestReviewItemComponent,
     RequestReviewListComponent,
     RequestlineEditComponent,
+    RequestlineCreateComponent
 
   ],
   imports: [

@@ -1,1 +1,56 @@
-<p>request-lines works!</p>
+<h1>Request</h1>
+
+<table class="table table-sm">
+    <thead>
+
+        <tr>
+            <th>id</th>
+            <th>description</th>
+            <th>status</th>
+            <th>total</th>
+            <th>user</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{request.id}}</td>
+            <td>{{request.description}}</td>
+            <td>{{request.status}}</td>
+            <td>{{request.total | currency}}</td>
+            <td>{{request.user?.username}}</td>
+            <td>
+                <span><button (click)="review()" class="btn btn-link">Review</button></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Requestline</h1>
+<a routerLink="/requestlines/create/{{request.id}}">Create</a>
+<table class="table table-sm">
+    <thead>
+
+        <tr>
+            <th>id</th>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+            <th>subtotal</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rl of request.requestlines">
+            <td>{{rl.id}}</td>
+            <td>{{rl.product?.name}}</td>
+            <td>{{rl.quantity}}</td>
+            <td>{{rl.product?.price | currency}}</td>
+            <td>{{rl.quantity * rl.product.price}}</td>
+            <td>
+                <span><a routerLink="/requestlines/edit/{{rl.id}}">Edit</a></span>
+                <span><button (click)="delete(rl.id)">Delete</button></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

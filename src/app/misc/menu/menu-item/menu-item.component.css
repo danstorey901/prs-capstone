@@ -1,17 +1,13 @@
-nav {
-    background-color: gray;
-}
-
 li {
     display: inline-block;
 }
 a {
-    color: red;
+    color: silver;
     text-decoration: none;
-    padding: 0 10px;
+    padding:3px 10px;
 }
-
 a:hover {
-    color: gray;
-    background-color: rgb(228, 16, 16);
+    color: white;
+    background-color: black;
+
 }

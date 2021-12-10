@@ -21,13 +21,13 @@ export class MenuComponent implements OnInit {
     new Menu("Vendors", "vendors/list"),
     new Menu("Products", "products/list"),
     new Menu("Requests", "requests/list"),
+    new Menu("Reviews", "/requests/reviews"),
     new Menu("About", "/about"),
     new Menu("Login", "/users/login"),
    
   ];
 
-  constructor(
-    /*private sys: SystemService   is this a constructor to enable the method to display username*/ ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
