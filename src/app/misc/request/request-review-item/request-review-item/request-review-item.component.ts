@@ -67,6 +67,8 @@ export class RequestReviewItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.refresh();
   }
+
 
 }
