@@ -9,6 +9,7 @@ import { Menu } from '../menu.class';
 export class MenuItemComponent implements OnInit {
 
   @Input()
+  
   menu!: Menu
   
   constructor() { }
